@@ -5,6 +5,7 @@ bindkey -e
 
 # Prepend our local path
 export PATH=$HOME/.local/bin:$PATH
+export FZF_PATH=/opt/homebrew/opt/fzf
 
 # === Antidote Plugins ===
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh

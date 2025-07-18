@@ -7,6 +7,10 @@ brew install eza
 brew install mosh
 brew install fzf
 brew install zoxide
+brew install bat
+brew install chafa
+brew install exiftool
+brew install ripgrep
 
 # Fonts
 brew install --cask font-iosevka
