@@ -1,0 +1,43 @@
+# .zshrc by anton@bnext.bio
+
+# === ZSH Config ===
+bindkey -e
+
+# Prepend our local path
+export PATH=$HOME/.local/bin:$PATH
+
+# === Antidote Plugins ===
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+antidote load
+
+# === Environment ===
+if [[ -x $(which nvim) ]]; then
+  export EDITOR="$(which nvim)"
+  export VISUAL="$(which nvim)"
+fi
+
+EZA_ICON_SPACING=2
+
+#AUTOSWITCH_DEFAULT_CONDAENV=base
+
+# === Aliases ===
+alias ls='eza --color=always --icons=auto --group-directories-first' # just replace ls by exa and allow all other exa arguments
+alias l='ls -lbF' #   list, size, type
+alias ll='ls -laag' # long, all
+alias lll='ls -laag | less'
+alias llm='ll --sort=modified' # list, long, sort by modification date
+alias la='ls -lbhHigUmuSa' # all list
+alias lx='ls -lbhHigUmuSa@' # all list and extended
+alias tree='eza --tree' # tree view
+alias lS='eza -1' # one column by just names
+alias less='less -R' # passthrough colors
+alias tm='tmux new -A -s main'
+alias ssh="TERM=xterm-256color ssh"
+alias vim="nvim"
+
+# === Tools Setup ===
+eval "$(zoxide init zsh)"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
