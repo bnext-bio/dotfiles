@@ -7,4 +7,4 @@ ohmyzsh/ohmyzsh path:plugins/mosh
 ohmyzsh/ohmyzsh path:plugins/gitfast
 trystan2k/zsh-tab-title
 conda-incubator/conda-zsh-completion
-unixorn/fzf-zsh-plugin
+#unixorn/fzf-zsh-plugin
