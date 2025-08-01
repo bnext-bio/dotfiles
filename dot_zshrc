@@ -8,7 +8,7 @@ export PATH=$HOME/.local/bin:$PATH
 export FZF_PATH=/opt/homebrew/opt/fzf
 
 # === Antidote Plugins ===
-source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+source ${ZDOTDIR:-$HOME}/.antidote/antidote.zsh
 antidote load
 
 # === Environment ===
