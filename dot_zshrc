@@ -43,4 +43,8 @@ source <(fzf --zsh)
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Atuin
-eval "$(atuin init zsh)"
+ATUIN_PATH="${ZDOTDIR:-$HOME}/.atuin"
+if [ -d "${ATUIN_PATH}" ]; then
+  export PATH="${ATUIN_PATH}/bin:$PATH"
+  eval "$(atuin init zsh)"
+fi
