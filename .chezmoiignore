@@ -1,1 +1,6 @@
 Brewfile
+
+# Only copy library files in on Mac OS
+{{- if ne .chezmoi.os "darwin" }}
+.private_Library
+{{- end }}
