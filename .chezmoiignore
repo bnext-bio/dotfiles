@@ -1,4 +1,5 @@
 Brewfile
+mamba-base-env.txt
 
 # Only copy library files in on Mac OS
 {{- if ne .chezmoi.os "darwin" }}
