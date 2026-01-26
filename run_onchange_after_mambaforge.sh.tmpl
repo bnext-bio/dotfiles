@@ -1,6 +1,6 @@
 {{ if eq .chezmoi.os "darwin" -}}
 #!/bin/zsh
 
-/opt/homebrew/bin/mamba --file="{{ .chezmoi.sourceDir }}/mamba-base-env.txt" -n base
+/opt/homebrew/bin/mamba install --file="{{ .chezmoi.sourceDir }}/mamba-base-env.txt" -n base
 
 {{ end -}}
