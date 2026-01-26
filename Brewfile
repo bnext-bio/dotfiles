@@ -10,6 +10,7 @@ brew "exiftool"
 brew "ripgrep"
 brew "fd"
 brew "tmux"
+brew "neovim"
 
 # Fonts
 cask "font-iosevka"
