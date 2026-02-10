@@ -3,6 +3,11 @@
 # === ZSH Config ===
 bindkey -e
 
+{{ if eq .chezmoi.os "linux" }}
+# Configure homebrew if it is installed
+test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+{{ end }}
+
 # Prepend our local path
 export PATH=$HOME/.local/bin:$PATH
 
